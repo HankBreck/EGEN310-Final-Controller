@@ -13,15 +13,23 @@ const sendTcpCommand = (powerRatio: number, direction: number, speed: number) =>
   }
   lastCommandSentTime = currentTime;
   
-  // TODO: parameterize power ratio, direction, and speed
   let ratioParam = Math.round(powerRatio*100);
   const urlParams = "/?" + ACTION + "=" + direction + "&" + RATIO + "=" + ratioParam + "&" + SPEED + "=" + speed
   fetch("http://" + arduinoHost + urlParams)
     .then(
-      (res) => console.log("fulfilled"), 
-      (res) => console.log("rejected"),
+      (res) => console.log("drive fulfilled"), 
+      (res) => console.log("drive rejected"),
     )
 
 }
 
-export { sendTcpCommand };
+const sendCutCommand = () => {
+  const urlParams = "/cut"
+  fetch("http://" + arduinoHost + urlParams)
+    .then(
+      (res) => console.log("cut fulfilled"), 
+      (res) => console.log("cut rejected"),
+    )
+}
+
+export { sendTcpCommand, sendCutCommand };
