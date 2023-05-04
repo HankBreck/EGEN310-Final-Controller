@@ -8,9 +8,9 @@ to write one piece of code that can be compiled for iOS or Andriod devices.
 ## Getting Started
 
 Before you can build the application on your own, you must install the Expo CLI and Expo Go (mobile emulator). 
-The link for installing them and their dependencies are given below.
-- [https://docs.expo.dev/get-started/installation/](Expo CLI)
-- [https://docs.expo.dev/get-started/expo-go/](Expo Go)
+The links for installing them and their dependencies are given below.
+- [Expo CLI](https://docs.expo.dev/get-started/installation/)
+- [Expo Go](https://docs.expo.dev/get-started/expo-go/)
 
 Once you have both programs completed, you can install the project's dependencies by running:
 ```bash
